@@ -1,0 +1,18 @@
+.App {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  width: 100vw;
+  justify-content: space-between;
+}
+
+.cat-card img {
+  height: 150px;
+}
+
+button {
+  color: rgb(0, 0, 255);
+  border: transparent;
+  border-radius: 5px;
+  width: 10vw;
+}/*# sourceMappingURL=cat.css.map */

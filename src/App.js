@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
-import './cat.css';
-import Cat from './cat.jsx';
+import './components/cat.css';
+import Cat from './components/cat.jsx';
 
 const cats = [
   {name: "Taya", url: "https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg?w=2141", text: "I'II be back"},

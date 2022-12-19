@@ -33,8 +33,10 @@ class Cat extends React.Component {
 export default Cat;*/
 
 //объявим пропсы через переменную
-import './cat.css';
+import './cat.scss';
 import React from 'react';
+
+const style={backgroundColor:'pink'};
 
 class Cat extends React.Component {
     render() {
@@ -45,7 +47,9 @@ class Cat extends React.Component {
             <div className="cat-name">{name}</div>
             <div className="cat-text">Hello everybody</div>
             <div class="cat-text">{text}</div>
-            <button>Take home</button>
+            <button style={{backgroundColor:'violet'}}>Take home</button>
+            <br/>
+            <button style={style}>Call</button>
         </div>
     );
 }};
