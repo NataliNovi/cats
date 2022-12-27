@@ -1,21 +1,30 @@
-$mainColor: rgb(0,0,255);
+$mainColor: rgb(13, 4, 1);
+$buttonColor: rgb(151, 226, 154);
 
 // цвет нужно указать через  # или rgb 
 
-.App {
-    display: flex;
-    flex-direction: row;
-    text-align: center;
-    width: 100vw;
-   justify-content: space-between;
-}
 
+.cat-card {
+    width:30%;
+    margin: 10px;
+}
 .cat-card img {
     height: 150px;
+    border-radius: 15px;
+    
 }
 
-button {
+.cat-name {
+    font-weight: bold;
+}
+
+.cat-text {
+    font-size: smaller;
+}
+
+.cat-card button {
     color: $mainColor;
+    background: $buttonColor;
     border: transparent;
     border-radius: 5px;
     width: 10vw;

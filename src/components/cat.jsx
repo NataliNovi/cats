@@ -14,7 +14,7 @@ function Cat(props) {
 export default Cat;*/
 
 
-//перепишем через классы
+//перепишем через классы. обязательно используем this.props
 /*import './cat.css';
 import React from 'react';
 
@@ -33,7 +33,8 @@ class Cat extends React.Component {
 export default Cat;*/
 
 //объявим пропсы через переменную
-import './cat.scss';
+//здесь используем константу style
+/*import './cat.scss';
 import React from 'react';
 
 const style={backgroundColor:'pink'};
@@ -53,19 +54,22 @@ class Cat extends React.Component {
         </div>
     );
 }};
-export default Cat;
+export default Cat;*/
 
-/* без пропсов
+/* без пропсов*/
 import './cat.css';
 
-function Cat() {
+function Cat(props) {
+   
     return (
         <div className="cat-card">
-            <img src = "https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg?w=2141" alt="img"></img>
-            <div className="cat-name">Tralala</div>
-            <div className="cat-text">Hello everybody</div>
-            <button>Take home</button>
+            <img src ={props.url} alt="img"></img>
+            <div className="cat-name">{props.name}</div>
+            <div className="cat-text">{props.text}</div>
+            <button style={{backgroundColor:'orange'}}>Take home</button>
+            <button>Call me</button>
+          
         </div>
     );
 }
-export default Cat;*/
+export default Cat;
