@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.module.scss';
+import './App.css';
 import Cat from './components/cat.jsx';
 
 const cats = [
@@ -13,13 +13,11 @@ const cats = [
 class App extends React.Component {
   render() {
   return (
-    <div className={styles.App}>
+    <div className="App">
    {
     cats.map((cat) =>
     <Cat name={cat.name} url={cat.url} text={cat.text}></Cat>)
    }
-
-   <button className={styles.button}>Click on me</button>
     </div>
   );
 }}

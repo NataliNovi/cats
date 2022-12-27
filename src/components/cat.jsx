@@ -39,7 +39,7 @@ export default Cat;*/
 
 
 /* без пропсов*/
-import './cat.css';
+import './cat.scss';
 
 function Cat(props) {
    
