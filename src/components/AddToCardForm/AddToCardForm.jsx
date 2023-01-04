@@ -3,9 +3,9 @@ import styles from './addToCardForm.module.scss';
 function AddToCartForm(props) {
     return (
         <form>
-            <button className="card-form__del">-</button>
+            <button className={styles.deleteButton}>-</button>
             <input className="card-form__input" value={props.addedToCart}/>
-            <button className="card-form__add">+</button>
+            <button className={styles.addButton}>+</button>
         </form>
     );
 }

@@ -5,8 +5,8 @@ import AddToCartForm from './AddToCardForm/AddToCardForm';
 //import photoTapki from '..//assets/photo/tapki.webp';
 
 
-
-function Card(props) {
+//через if
+/*function Card(props) {
     const {title, url, description, price, addedToCart} = props;
     let actionItem;
     if (addedToCart) {
@@ -29,10 +29,35 @@ function Card(props) {
             </div>
         </div>
     );
-
-  
-    
 }
+export default Card;*/
+
+
+//через тернарный оператор
+
+function Card(props) {
+    const {title, url, description, price, addedToCart} = props;
+    
+        return (
+            <div className={styles.cardsContainer}>
+            <div>
+            <div className="card-body">
+                <img className={styles.shoesImg} src={url} alt={title}/>
+                <h4 className="card-title">{title}</h4>
+                <p className="card-text">{description}</p>
+            </div>
+            <div className={styles.cardFooter}>
+                <span className="card-price">${price}</span>
+                    {addedToCart
+                        ? <AddToCartForm addedToCart={addedToCart} />
+                        : <AddToCartButton />
+                    }
+                </div>
+                </div>
+            </div>
+        );
+    }
+
 export default Card;
 
 
