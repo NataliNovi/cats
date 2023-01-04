@@ -1,0 +1,16 @@
+.shoesImg {
+    height: 160px;
+}
+
+.cardsContainer {
+    display: flex;
+    padding: 10px;
+}
+
+.cardFooter {
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+}

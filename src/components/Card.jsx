@@ -1,3 +1,40 @@
+import styles from './card.module.scss';
+import AddToCartButton from './AddToCartButton/AddToCartButton';
+import AddToCartForm from './AddToCardForm/AddToCardForm';
+//import photoBoty from '..//assets/photo/boty.jpeg';
+//import photoTapki from '..//assets/photo/tapki.webp';
+
+
+
+function Card(props) {
+    const {title, url, description, price, addedToCart} = props;
+    let actionItem;
+    if (addedToCart) {
+        actionItem = <AddToCartForm addedToCart={addedToCart} />;
+    } else {
+        actionItem = <AddToCartButton />;
+    }
+    return (
+        <div className={styles.cardsContainer}>
+            <div>
+            <div className="card-body">
+                <img className={styles.shoesImg} src={url} alt={title}/>
+                <h4 className="card-title">{title}</h4>
+                <p className="card-text">{description}</p>
+            </div>
+            <div className={styles.cardFooter}>
+                <span className="card-price">${price}</span>
+             {actionItem}
+                </div>
+            </div>
+        </div>
+    );
+
+  
+    
+}
+export default Card;
+
 
 /*
 function Cat(props) {
@@ -38,8 +75,9 @@ class Cat extends React.Component {
 export default Cat;*/
 
 
+
 /* без пропсов*/
-import './cat.scss';
+/*import './cat.scss';
 
 function Cat(props) {
    
@@ -54,5 +92,5 @@ function Cat(props) {
         </div>
     );
 }
-export default Cat;
+export default Cat;*/
 
