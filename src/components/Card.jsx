@@ -14,10 +14,15 @@ function Card(props) {
     //иначе - кнопка "заказать"
 
     //!!!!! почему же у меня все время кнопка ЗАКАЗАТЬ, если  передаю пропсами addedToCard true или число 2, 3?
-    if (props.addedToCart) {
-        actionItem = <AddToCartForm addedToCart={addedToCart} />;
+
+    //всегда отрисовывается то, что стоит в условии последним. Получается, что {addedToCart} всегда false
+
+    console.log(addedToCart);
+    
+    if (addedToCart) {
+        actionItem = <AddToCartButton addedToCart={addedToCart} />;
     } else {
-        actionItem = <AddToCartButton />;
+        actionItem = <AddToCartForm />;
     }
     return (
         <div className={styles.cardsContainer}>
