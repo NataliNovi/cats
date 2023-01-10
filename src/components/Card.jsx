@@ -7,7 +7,7 @@ import AddToCartForm from './AddToCardForm/AddToCardForm';
 
 //через if
 function Card(props) {
-    const {title, url, description, price, textys, addedToCart} = props;
+    const {title, url, description, price, textys, addedToCard} = props;
     console.log(props);
     let actionItem;
     //если свойство addedToCart активировано, то включается форма заказа с +/-
@@ -17,10 +17,10 @@ function Card(props) {
 
     //всегда отрисовывается то, что стоит в условии последним. Получается, что {addedToCart} всегда false
 
-    console.log(addedToCart);
-    
-    if (addedToCart) {
-        actionItem = <AddToCartButton addedToCart={addedToCart} />;
+    console.log(addedToCard);
+
+    if (addedToCard) {
+        actionItem = <AddToCartButton addedToCart={addedToCard} />;
     } else {
         actionItem = <AddToCartForm />;
     }
