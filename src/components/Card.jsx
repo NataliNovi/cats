@@ -6,10 +6,15 @@ import AddToCartForm from './AddToCardForm/AddToCardForm';
 
 
 //через if
-/*function Card(props) {
-    const {title, url, description, price, addedToCart} = props;
+function Card(props) {
+    const {title, url, description, price, textys, addedToCart} = props;
+    console.log(props);
     let actionItem;
-    if (addedToCart) {
+    //если свойство addedToCart активировано, то включается форма заказа с +/-
+    //иначе - кнопка "заказать"
+
+    //!!!!! почему же у меня все время кнопка ЗАКАЗАТЬ, если  передаю пропсами addedToCard true или число 2, 3?
+    if (props.addedToCart) {
         actionItem = <AddToCartForm addedToCart={addedToCart} />;
     } else {
         actionItem = <AddToCartButton />;
@@ -21,6 +26,7 @@ import AddToCartForm from './AddToCardForm/AddToCardForm';
                 <img className={styles.shoesImg} src={url} alt={title}/>
                 <h4 className="card-title">{title}</h4>
                 <p className="card-text">{description}</p>
+                <p className='card-textys'>{textys}</p>
             </div>
             <div className={styles.cardFooter}>
                 <span className="card-price">${price}</span>
@@ -30,12 +36,12 @@ import AddToCartForm from './AddToCardForm/AddToCardForm';
         </div>
     );
 }
-export default Card;*/
+export default Card;
 
 
 //через тернарный оператор
 
-function Card(props) {
+/*function Card(props) {
     const {title, url, description, price, addedToCart} = props;
     
         return (
@@ -57,11 +63,41 @@ function Card(props) {
             </div>
         );
     }
+export default Card;*/
 
-export default Card;
+
+/*через логический оператор &&*/
+
+/*function Card(props) {
+    const {title, url, description, price, addedToCart} = props;
+    
+        return (
+            <div className={styles.cardsContainer}>
+            <div>
+            <div className="card-body">
+
+            { url && <img src={url} className={styles.shoesImg} alt={title}/>}
+            
+                <h4 className="card-title">{title}</h4>
+                <p className="card-text">{description}</p>
+            </div>
+            <div className={styles.cardFooter}>
+                <span className="card-price">${price}</span>
+                    {addedToCart
+                        ? <AddToCartForm addedToCart={addedToCart} />
+                        : <AddToCartButton />
+                    }
+                </div>
+                </div>
+            </div>
+        );
+    }
+export default Card;*/
 
 
-/*
+
+/* здесь начинали с котиков 
+
 function Cat(props) {
     return (
         <div className="cat-card">
