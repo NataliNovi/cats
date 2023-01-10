@@ -1,0 +1,15 @@
+.box {
+    border: 15px solid rgb(53, 192, 242);
+    padding: 50px;
+    background-color: rgb(96, 97, 103);
+    margin: 20px;
+    color:white;
+}
+
+.box__active {
+    border: 15px solid rgb(53, 192, 242);
+    padding: 50px;
+    background-color: rgb(6, 23, 117);
+    margin: 20px;
+    color:white;
+}
